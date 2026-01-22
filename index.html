@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisdom Classes - Complete Coaching Management Solution</title>
+    <meta name="description"
+        content="Transform your coaching institute with Wisdom Classes - the all-in-one platform for attendance tracking, parent notifications, and student management.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">📚</span>
+                <span>Wisdom Classes</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#attendance">Attendance</a></li>
+                <li><a href="#notifications">Notifications</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#analytics">Analytics</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="btn btn-primary">Get Demo</a>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge">🚀 Trusted by 500+ Coaching Institutes</div>
+                <h1>Transform Your <span class="gradient-text">Coaching Institute</span> with Smart Management</h1>
+                <p class="hero-description">
+                    Complete solution for attendance tracking, parent notifications, resource sharing, and analytics.
+                    Available on Web, iOS & Android.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary btn-lg">
+                        <span>Start Free Trial</span>
+                        <span class="arrow">→</span>
+                    </a>
+                    <a href="#demo" class="btn btn-secondary btn-lg">
+                        <span class="play-icon">▶</span>
+                        <span>Watch Demo</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50,000+</span>
+                        <span class="stat-label">Students Managed</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Parent Satisfaction</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5x</span>
+                        <span class="stat-label">Faster Updates</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="dashboard-preview">
+                    <div class="preview-header">
+                        <div class="preview-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <div class="preview-content">
+                        <div class="preview-sidebar"></div>
+                        <div class="preview-main">
+                            <div class="preview-cards">
+                                <div class="preview-card purple"></div>
+                                <div class="preview-card green"></div>
+                                <div class="preview-card pink"></div>
+                            </div>
+                            <div class="preview-chart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By -->
+    <section class="trusted-by">
+        <div class="container">
+            <p>Trusted by leading coaching institutes across India</p>
+            <div class="trust-logos">
+                <span>Allen Classes</span>
+                <span>Akash Institute</span>
+                <span>FIITJEE</span>
+                <span>Bansal Classes</span>
+                <span>Resonance</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Overview -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Features</span>
+                <h2>Everything You Need to <span class="gradient-text">Manage Your Institute</span></h2>
+                <p>One platform. All tools. Zero hassle.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Smart Attendance</h3>
+                    <p>Digital attendance with instant parent notifications. Track patterns and identify at-risk
+                        students.</p>
+                    <a href="#attendance" class="feature-link">Learn more →</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔔</div>
+                    <h3>Multi-Channel Alerts</h3>
+                    <p>SMS, WhatsApp, Email, Push & Telegram. Reach parents through their preferred channel.</p>
+                    <a href="#notifications" class="feature-link">Learn more →</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Resource Hub</h3>
+                    <p>Upload notes, assignments, and study materials. Students get instant notifications.</p>
+                    <a href="#resources" class="feature-link">Learn more →</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Real-time insights on attendance trends, student performance, and engagement metrics.</p>
+                    <a href="#analytics" class="feature-link">Learn more →</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>Homework & Assignments</h3>
+                    <p>Create, distribute, and grade assignments. Track submissions and provide feedback.</p>
+                    <a href="#homework" class="feature-link">Learn more →</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📢</div>
+                    <h3>News & Updates</h3>
+                    <p>Broadcast announcements, schedule changes, and events to all stakeholders instantly.</p>
+                    <a href="#news" class="feature-link">Learn more →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Attendance Feature Section -->
+    <section class="feature-detail" id="attendance">
+        <div class="container">
+            <div class="feature-detail-grid">
+                <div class="feature-detail-content">
+                    <span class="section-badge">Attendance System</span>
+                    <h2>Smart Attendance with <span class="gradient-text">Auto-Alerts</span></h2>
+                    <p class="feature-description">
+                        Never let a student slip through the cracks. Our intelligent attendance system automatically
+                        notifies parents when their child is absent, with configurable thresholds based on student
+                        categories.
+                    </p>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="check">✓</span>
+                            <div>
+                                <strong>One-Click Marking</strong>
+                                <p>Mark attendance for entire class in seconds</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <div>
+                                <strong>Configurable Thresholds</strong>
+                                <p>Different alert rules for different student groups (girls, weak students, etc.)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <div>
+                                <strong>Automatic Daily Checks</strong>
+                                <p>System scans for consecutive absences and sends alerts automatically</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <div>
+                                <strong>Historical Reports</strong>
+                                <p>Access complete attendance history with exportable reports</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">See it in Action →</a>
+                </div>
+                <div class="feature-detail-visual">
+                    <div class="attendance-demo">
+                        <div class="demo-header">
+                            <h4>Mark Attendance - Class 10A</h4>
+                            <span class="demo-date">Jan 22, 2026</span>
+                        </div>
+                        <div class="student-list-demo">
+                            <div class="student-item">
+                                <div class="student-avatar">RK</div>
+                                <span class="student-name">Rahul Kumar</span>
+                                <div class="status-buttons">
+                                    <button class="status-btn active present">✓</button>
+                                    <button class="status-btn absent">✗</button>
+                                </div>
+                            </div>
+                            <div class="student-item">
+                                <div class="student-avatar">PS</div>
+                                <span class="student-name">Priyanka Singh</span>
+                                <div class="status-buttons">
+                                    <button class="status-btn present">✓</button>
+                                    <button class="status-btn active absent">✗</button>
+                                </div>
+                            </div>
+                            <div class="student-item">
+                                <div class="student-avatar">AP</div>
+                                <span class="student-name">Amit Patel</span>
+                                <div class="status-buttons">
+                                    <button class="status-btn active present">✓</button>
+                                    <button class="status-btn absent">✗</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alert-preview">
+                            <span class="alert-icon">⚠️</span>
+                            <span>Priyanka absent 2 days - Alert sent to parent</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notifications Feature Section -->
+    <section class="feature-detail alt-bg" id="notifications">
+        <div class="container">
+            <div class="feature-detail-grid reverse">
+                <div class="feature-detail-content">
+                    <span class="section-badge">Notification System</span>
+                    <h2>Reach Parents Through <span class="gradient-text">5 Channels</span></h2>
+                    <p class="feature-description">
+                        Parents receive updates on their preferred platform. Our multi-channel notification
+                        system ensures no message goes unread.
+                    </p>
+                    <div class="channels-grid">
+                        <div class="channel-card">
+                            <span class="channel-icon">📱</span>
+                            <span>SMS</span>
+                        </div>
+                        <div class="channel-card">
+                            <span class="channel-icon">💬</span>
+                            <span>WhatsApp</span>
+                        </div>
+                        <div class="channel-card">
+                            <span class="channel-icon">📧</span>
+                            <span>Email</span>
+                        </div>
+                        <div class="channel-card">
+                            <span class="channel-icon">🔔</span>
+                            <span>Push</span>
+                        </div>
+                        <div class="channel-card">
+                            <span class="channel-icon">✈️</span>
+                            <span>Telegram</span>
+                        </div>
+                    </div>
+                    <div class="notification-types">
+                        <h4>Automatic Notifications For:</h4>
+                        <ul>
+                            <li>🚨 Absence alerts to parents</li>
+                            <li>📚 New notes/resources uploaded</li>
+                            <li>📝 Homework assignments</li>
+                            <li>📅 Schedule changes</li>
+                            <li>🎉 Events & announcements</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="feature-detail-visual">
+                    <div class="notification-demo">
+                        <div class="phone-mockup">
+                            <div class="phone-notch"></div>
+                            <div class="notification-stack">
+                                <div class="notification-item whatsapp">
+                                    <div class="notif-icon">💬</div>
+                                    <div class="notif-content">
+                                        <span class="notif-title">Wisdom Classes</span>
+                                        <p>Dear Rajesh, your child Rahul has been absent for 3 consecutive days. Please
+                                            contact us.</p>
+                                        <span class="notif-time">Just now</span>
+                                    </div>
+                                </div>
+                                <div class="notification-item sms">
+                                    <div class="notif-icon">📱</div>
+                                    <div class="notif-content">
+                                        <span class="notif-title">+91-98765-XXXXX</span>
+                                        <p>New Physics notes uploaded: "Chapter 5 - Laws of Motion"</p>
+                                        <span class="notif-time">2m ago</span>
+                                    </div>
+                                </div>
+                                <div class="notification-item push">
+                                    <div class="notif-icon">🔔</div>
+                                    <div class="notif-content">
+                                        <span class="notif-title">Homework Due</span>
+                                        <p>Mathematics assignment due tomorrow!</p>
+                                        <span class="notif-time">10m ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Feature Section -->
+    <section class="feature-detail" id="resources">
+        <div class="container">
+            <div class="feature-detail-grid">
+                <div class="feature-detail-content">
+                    <span class="section-badge">Resource Management</span>
+                    <h2>Share Notes & Materials <span class="gradient-text">Instantly</span></h2>
+                    <p class="feature-description">
+                        Upload PDFs, documents, presentations, and videos. Students get notified immediately
+                        and can access materials from any device.
+                    </p>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="check">✓</span>
+                            <div>
+                                <strong>Multiple Formats</strong>
+                                <p>Support for PDF, DOC, PPT, images, and videos</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <div>
+                                <strong>Organized by Class & Subject</strong>
+                                <p>Easy navigation and search for students</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <div>
+                                <strong>Download Tracking</strong>
+                                <p>See which students accessed the materials</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <div>
+                                <strong>Push on Upload</strong>
+                                <p>Automatic notification when new materials are added</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-detail-visual">
+                    <div class="resources-demo">
+                        <div class="resource-card">
+                            <span class="resource-icon">📄</span>
+                            <div class="resource-info">
+                                <h5>Physics Chapter 5 - Laws of Motion</h5>
+                                <p>Class 10 • Physics • Prof. Sharma</p>
+                                <div class="resource-stats">
+                                    <span>📥 45 downloads</span>
+                                    <span>👁️ 78 views</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <span class="resource-icon">📊</span>
+                            <div class="resource-info">
+                                <h5>Mathematics Formula Sheet</h5>
+                                <p>Class 10 • Mathematics • Prof. Gupta</p>
+                                <div class="resource-stats">
+                                    <span>📥 62 downloads</span>
+                                    <span>👁️ 95 views</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <span class="resource-icon">🎬</span>
+                            <div class="resource-info">
+                                <h5>Chemistry Lab Experiment Video</h5>
+                                <p>Class 11 • Chemistry • Prof. Verma</p>
+                                <div class="resource-stats">
+                                    <span>📥 38 downloads</span>
+                                    <span>👁️ 120 views</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Homework Section -->
+    <section class="feature-detail alt-bg" id="homework">
+        <div class="container">
+            <div class="feature-detail-grid reverse">
+                <div class="feature-detail-content">
+                    <span class="section-badge">Assignments</span>
+                    <h2>Manage Homework <span class="gradient-text">Effortlessly</span></h2>
+                    <p class="feature-description">
+                        Create assignments, set deadlines, receive submissions, and provide grades with feedback.
+                        Everything in one place.
+                    </p>
+                    <div class="homework-flow">
+                        <div class="flow-step">
+                            <span class="step-num">1</span>
+                            <span>Create Assignment</span>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-step">
+                            <span class="step-num">2</span>
+                            <span>Students Submit</span>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-step">
+                            <span class="step-num">3</span>
+                            <span>Grade & Feedback</span>
+                        </div>
+                    </div>
+                    <ul class="feature-list compact">
+                        <li><span class="check">✓</span> Set due dates with automatic reminders</li>
+                        <li><span class="check">✓</span> Accept file uploads and text submissions</li>
+                        <li><span class="check">✓</span> Track late submissions</li>
+                        <li><span class="check">✓</span> Provide personalized feedback</li>
+                    </ul>
+                </div>
+                <div class="feature-detail-visual">
+                    <div class="homework-demo">
+                        <div class="hw-card">
+                            <div class="hw-header">
+                                <span class="hw-subject">Mathematics</span>
+                                <span class="hw-due">Due: Jan 29</span>
+                            </div>
+                            <h5>Chapter 5 Exercises</h5>
+                            <p>Complete exercises 5.1 to 5.5</p>
+                            <div class="hw-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 75%"></div>
+                                </div>
+                                <span>35/47 submitted</span>
+                            </div>
+                        </div>
+                        <div class="submission-list">
+                            <div class="submission-item">
+                                <span class="sub-avatar">RK</span>
+                                <span class="sub-name">Rahul Kumar</span>
+                                <span class="sub-grade">48/50</span>
+                                <span class="sub-status graded">Graded</span>
+                            </div>
+                            <div class="submission-item">
+                                <span class="sub-avatar">PS</span>
+                                <span class="sub-name">Priyanka Singh</span>
+                                <span class="sub-grade">-</span>
+                                <span class="sub-status pending">Pending</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analytics Section -->
+    <section class="feature-detail" id="analytics">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Analytics</span>
+                <h2>Data-Driven Insights for <span class="gradient-text">Better Decisions</span></h2>
+                <p>Real-time dashboards give you complete visibility into your institute's performance</p>
+            </div>
+            <div class="analytics-grid">
+                <div class="analytics-card">
+                    <div class="analytics-header">
+                        <h4>Attendance Overview</h4>
+                        <span class="analytics-period">Last 30 Days</span>
+                    </div>
+                    <div class="analytics-chart">
+                        <div class="bar-chart">
+                            <div class="bar" style="height: 80%"><span>M</span></div>
+                            <div class="bar" style="height: 92%"><span>T</span></div>
+                            <div class="bar" style="height: 88%"><span>W</span></div>
+                            <div class="bar" style="height: 75%"><span>T</span></div>
+                            <div class="bar" style="height: 95%"><span>F</span></div>
+                            <div class="bar" style="height: 70%"><span>S</span></div>
+                        </div>
+                    </div>
+                    <div class="analytics-stat">
+                        <span class="big-number">87%</span>
+                        <span class="stat-text">Average Attendance</span>
+                    </div>
+                </div>
+                <div class="analytics-card">
+                    <div class="analytics-header">
+                        <h4>Student Distribution</h4>
+                        <span class="analytics-period">By Class</span>
+                    </div>
+                    <div class="pie-chart-demo">
+                        <div class="pie-segment class10"></div>
+                        <div class="pie-segment class11"></div>
+                        <div class="pie-segment class12"></div>
+                    </div>
+                    <div class="pie-legend">
+                        <div><span class="dot c10"></span> Class 10 - 145</div>
+                        <div><span class="dot c11"></span> Class 11 - 120</div>
+                        <div><span class="dot c12"></span> Class 12 - 98</div>
+                    </div>
+                </div>
+                <div class="analytics-card">
+                    <div class="analytics-header">
+                        <h4>At-Risk Students</h4>
+                        <span class="analytics-period">Low Attendance</span>
+                    </div>
+                    <div class="risk-list">
+                        <div class="risk-item">
+                            <span class="risk-avatar">AP</span>
+                            <div class="risk-info">
+                                <span class="risk-name">Amit Patel</span>
+                                <span class="risk-class">Class 10A</span>
+                            </div>
+                            <span class="risk-percent">62%</span>
+                        </div>
+                        <div class="risk-item">
+                            <span class="risk-avatar">SK</span>
+                            <div class="risk-info">
+                                <span class="risk-name">Sunil Kumar</span>
+                                <span class="risk-class">Class 11B</span>
+                            </div>
+                            <span class="risk-percent">68%</span>
+                        </div>
+                        <div class="risk-item">
+                            <span class="risk-avatar">RV</span>
+                            <div class="risk-info">
+                                <span class="risk-name">Rekha Verma</span>
+                                <span class="risk-class">Class 12A</span>
+                            </div>
+                            <span class="risk-percent">71%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="feature-detail alt-bg" id="news">
+        <div class="container">
+            <div class="feature-detail-grid">
+                <div class="feature-detail-content">
+                    <span class="section-badge">News & Announcements</span>
+                    <h2>Keep Everyone <span class="gradient-text">Informed</span></h2>
+                    <p class="feature-description">
+                        Broadcast important updates, schedule changes, events, and announcements to
+                        students, parents, and staff with a single click.
+                    </p>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="check">✓</span>
+                            <div>
+                                <strong>Targeted Messaging</strong>
+                                <p>Send to specific classes, sections, or roles</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <div>
+                                <strong>Priority Levels</strong>
+                                <p>Mark urgent vs. normal announcements</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <div>
+                                <strong>Pin Important News</strong>
+                                <p>Keep critical announcements at the top</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <div>
+                                <strong>Rich Media</strong>
+                                <p>Attach images and files to announcements</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-detail-visual">
+                    <div class="news-demo">
+                        <div class="news-item pinned">
+                            <span class="pin-badge">📌 Pinned</span>
+                            <span class="news-cat">Announcement</span>
+                            <h5>Welcome to Academic Year 2025-26!</h5>
+                            <p>We are excited to welcome all students back. Classes begin January 20th.</p>
+                            <span class="news-date">Jan 15, 2026</span>
+                        </div>
+                        <div class="news-item">
+                            <span class="news-cat urgent">Holiday</span>
+                            <h5>Republic Day - Classes Closed</h5>
+                            <p>January 26th will be a holiday for Republic Day celebrations.</p>
+                            <span class="news-date">Jan 20, 2026</span>
+                        </div>
+                        <div class="news-item">
+                            <span class="news-cat">Event</span>
+                            <h5>Parent-Teacher Meeting</h5>
+                            <p>PTM scheduled for January 25th. All parents invited.</p>
+                            <span class="news-date">Jan 18, 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cross Platform -->
+    <section class="cross-platform">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Cross-Platform</span>
+                <h2>Available on <span class="gradient-text">Every Device</span></h2>
+                <p>Access Wisdom Classes from anywhere - Web, iOS, or Android</p>
+            </div>
+            <div class="platform-showcase">
+                <div class="platform-card">
+                    <span class="platform-icon">🖥️</span>
+                    <h4>Web Dashboard</h4>
+                    <p>Full-featured admin and professor dashboard</p>
+                </div>
+                <div class="platform-card">
+                    <span class="platform-icon">📱</span>
+                    <h4>iOS App</h4>
+                    <p>Native app for iPhone and iPad</p>
+                </div>
+                <div class="platform-card">
+                    <span class="platform-icon">🤖</span>
+                    <h4>Android App</h4>
+                    <p>Optimized for all Android devices</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Testimonials</span>
+                <h2>What Our <span class="gradient-text">Customers Say</span></h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Wisdom Classes transformed how we manage our institute. Parent communication improved
+                            dramatically, and attendance tracking is now effortless."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RS</div>
+                        <div class="author-info">
+                            <strong>Rajesh Sharma</strong>
+                            <span>Director, Sharma Coaching Center</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The multi-channel notification system is a game-changer. Parents actually read our messages
+                            now because they arrive on WhatsApp!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PG</div>
+                        <div class="author-info">
+                            <strong>Priya Gupta</strong>
+                            <span>Principal, Gupta Academy</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"We reduced our admin workload by 60% after implementing Wisdom Classes. The time saved lets
+                            us focus on actual teaching."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AV</div>
+                        <div class="author-info">
+                            <strong>Amit Verma</strong>
+                            <span>Owner, Verma Tutorials</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="contact">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your <span class="gradient-text">Coaching Institute?</span></h2>
+                <p>Join 500+ institutes already using Wisdom Classes. Start your free trial today.</p>
+                <form class="cta-form" onsubmit="handleSubmit(event)">
+                    <div class="form-row">
+                        <input type="text" placeholder="Institute Name" required>
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="email" placeholder="Email Address" required>
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-row">
+                        <select required>
+                            <option value="">Number of Students</option>
+                            <option value="1-50">1-50</option>
+                            <option value="51-200">51-200</option>
+                            <option value="201-500">201-500</option>
+                            <option value="500+">500+</option>
+                        </select>
+                        <select required>
+                            <option value="">Interested In</option>
+                            <option value="demo">Free Demo</option>
+                            <option value="trial">Free Trial</option>
+                            <option value="pricing">Custom Pricing</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg full-width">
+                        Get Started Free <span class="arrow">→</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">📚</span>
+                        <span>Wisdom Classes</span>
+                    </a>
+                    <p>The complete coaching management solution for modern educational institutes.</p>
+                    <div class="social-links">
+                        <a href="#">Twitter</a>
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#">Mobile App</a></li>
+                        <li><a href="#">Integrations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Wisdom Classes. All rights reserved.</p>
+                <p>Made with ❤️ in India</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

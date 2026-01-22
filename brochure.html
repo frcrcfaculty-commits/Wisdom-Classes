@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisdom Classes - Product Brochure</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0a1a;
+            color: white;
+            line-height: 1.6;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 100%);
+            page-break-after: always;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(102, 126, 234, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(118, 75, 162, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Cover Page */
+        .cover {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+        }
+
+        .logo-large {
+            font-size: 72px;
+            margin-bottom: 20px;
+        }
+
+        .cover h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .cover .tagline {
+            font-size: 24px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 40px;
+        }
+
+        .cover .subtitle {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.5);
+            max-width: 400px;
+        }
+
+        .cover-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .cover-stat {
+            text-align: center;
+        }
+
+        .cover-stat .number {
+            font-size: 36px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .cover-stat .label {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Page Headers */
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .page-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .page-logo span:first-child {
+            font-size: 24px;
+        }
+
+        .page-number {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Section Headers */
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .section-icon {
+            font-size: 32px;
+        }
+
+        .section-title h2 {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .section-title h2 span {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-desc {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        /* Feature Cards */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+        }
+
+        .feature-card h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .feature-card p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Bullet Lists */
+        .bullet-list {
+            list-style: none;
+        }
+
+        .bullet-list li {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+
+        .bullet-list .check {
+            width: 22px;
+            height: 22px;
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+
+        .bullet-list strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .bullet-list .desc {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 12px;
+        }
+
+        /* Channels */
+        .channels-row {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .channel-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 10px 16px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .channel-badge span:first-child {
+            font-size: 20px;
+        }
+
+        /* Pricing */
+        .pricing-row {
+            display: flex;
+            gap: 16px;
+        }
+
+        .pricing-card {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .pricing-card.featured {
+            border-color: #667eea;
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        .pricing-card h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .price {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .price-period {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 16px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            text-align: left;
+            font-size: 12px;
+        }
+
+        .pricing-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .pricing-features li::before {
+            content: '✓ ';
+            color: #38ef7d;
+        }
+
+        /* Contact */
+        .contact-info {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .contact-info h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            font-size: 14px;
+        }
+
+        .contact-item span {
+            font-size: 24px;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        /* Two Column Layout */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        @media print {
+            body {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Page 1: Cover -->
+    <div class="page">
+        <div class="content cover">
+            <div class="logo-large">📚</div>
+            <h1>Wisdom Classes</h1>
+            <p class="tagline">Complete Coaching Management Solution</p>
+            <p class="subtitle">
+                Transform your coaching institute with smart attendance tracking,
+                multi-channel parent notifications, and powerful analytics.
+            </p>
+            <div class="cover-stats">
+                <div class="cover-stat">
+                    <div class="number">500+</div>
+                    <div class="label">Institutes</div>
+                </div>
+                <div class="cover-stat">
+                    <div class="number">50,000+</div>
+                    <div class="label">Students</div>
+                </div>
+                <div class="cover-stat">
+                    <div class="number">98%</div>
+                    <div class="label">Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 2: Overview -->
+    <div class="page">
+        <div class="content">
+            <div class="page-header">
+                <div class="page-logo"><span>📚</span> Wisdom Classes</div>
+                <div class="page-number">Page 2</div>
+            </div>
+
+            <div class="section-title">
+                <span class="section-icon">✨</span>
+                <h2>Why Choose <span>Wisdom Classes?</span></h2>
+            </div>
+
+            <p class="section-desc">
+                One platform to manage everything - attendance, notifications, resources, homework, and analytics.
+                Available on Web, iOS, and Android.
+            </p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>📅 Smart Attendance</h3>
+                    <p>Digital attendance with configurable auto-alerts to parents when students are absent.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔔 Multi-Channel Alerts</h3>
+                    <p>Reach parents via SMS, WhatsApp, Email, Push notifications, and Telegram.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📚 Resource Hub</h3>
+                    <p>Upload notes, PDFs, videos. Students get notified instantly on their devices.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📝 Homework System</h3>
+                    <p>Create assignments, receive submissions, grade and provide feedback.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📊 Analytics Dashboard</h3>
+                    <p>Real-time insights on attendance trends, at-risk students, and performance.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📢 Announcements</h3>
+                    <p>Broadcast news, schedule changes, and events to targeted audiences.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 3: Attendance System -->
+    <div class="page">
+        <div class="content">
+            <div class="page-header">
+                <div class="page-logo"><span>📚</span> Wisdom Classes</div>
+                <div class="page-number">Page 3</div>
+            </div>
+
+            <div class="section-title">
+                <span class="section-icon">📅</span>
+                <h2>Smart <span>Attendance System</span></h2>
+            </div>
+
+            <p class="section-desc">
+                Never let a student slip through the cracks. Our intelligent system automatically
+                tracks patterns and alerts parents about absences.
+            </p>
+
+            <div class="two-col">
+                <div>
+                    <ul class="bullet-list">
+                        <li>
+                            <span class="check">✓</span>
+                            <div>
+                                <strong>One-Click Marking</strong>
+                                <span class="desc">Mark attendance for entire class in seconds with bulk actions.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <div>
+                                <strong>Configurable Thresholds</strong>
+                                <span class="desc">Set different alert rules for different student categories.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <div>
+                                <strong>Filter-Based Alerts</strong>
+                                <span class="desc">Girls: 2 days, Weak students: 2 days, Good students: 5 days.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <div>
+                                <strong>Automatic Daily Checks</strong>
+                                <span class="desc">System scans for consecutive absences at scheduled times.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <div>
+                                <strong>Historical Reports</strong>
+                                <span class="desc">Complete attendance history with exportable reports.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="feature-card">
+                        <h3>📊 Key Metrics</h3>
+                        <p style="margin-bottom: 16px;">Track these attendance KPIs in real-time:</p>
+                        <ul style="list-style: none; font-size: 13px;">
+                            <li style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">• Daily
+                                attendance rate</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">• Weekly/monthly
+                                trends</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">• At-risk
+                                students count</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">• Class-wise
+                                comparison</li>
+                            <li style="padding: 8px 0;">• Individual student patterns</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 4: Notifications -->
+    <div class="page">
+        <div class="content">
+            <div class="page-header">
+                <div class="page-logo"><span>📚</span> Wisdom Classes</div>
+                <div class="page-number">Page 4</div>
+            </div>
+
+            <div class="section-title">
+                <span class="section-icon">🔔</span>
+                <h2>Multi-Channel <span>Notifications</span></h2>
+            </div>
+
+            <p class="section-desc">
+                Parents receive updates on their preferred platform. Ensure no message goes unread
+                with 5 different communication channels.
+            </p>
+
+            <div class="channels-row">
+                <div class="channel-badge"><span>📱</span> SMS</div>
+                <div class="channel-badge"><span>💬</span> WhatsApp</div>
+                <div class="channel-badge"><span>📧</span> Email</div>
+                <div class="channel-badge"><span>🔔</span> Push</div>
+                <div class="channel-badge"><span>✈️</span> Telegram</div>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>🚨 Absence Alerts</h3>
+                    <p>Automatic notifications when students miss classes based on configurable thresholds.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📚 Resource Updates</h3>
+                    <p>Instant notifications when professors upload new study materials.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📝 Homework Reminders</h3>
+                    <p>Deadline reminders for pending assignments sent to students.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📢 Announcements</h3>
+                    <p>Broadcast important news, schedule changes, and events.</p>
+                </div>
+            </div>
+
+            <div class="feature-card" style="margin-top: 24px;">
+                <h3>💡 Smart Delivery</h3>
+                <p>Our system automatically selects the best channel based on parent preferences. If WhatsApp delivery
+                    fails, it falls back to SMS, ensuring 100% message delivery.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 5: Resources & Homework -->
+    <div class="page">
+        <div class="content">
+            <div class="page-header">
+                <div class="page-logo"><span>📚</span> Wisdom Classes</div>
+                <div class="page-number">Page 5</div>
+            </div>
+
+            <div class="section-title">
+                <span class="section-icon">📚</span>
+                <h2>Resources & <span>Homework</span></h2>
+            </div>
+
+            <div class="two-col">
+                <div>
+                    <h3 style="font-size: 18px; margin-bottom: 16px;">📄 Study Materials</h3>
+                    <ul class="bullet-list">
+                        <li>
+                            <span class="check">✓</span>
+                            <div>
+                                <strong>Multiple Formats</strong>
+                                <span class="desc">PDF, DOC, PPT, images, videos</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <div>
+                                <strong>Organized Library</strong>
+                                <span class="desc">By class, section, and subject</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <div>
+                                <strong>Download Tracking</strong>
+                                <span class="desc">See who accessed materials</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <div>
+                                <strong>Instant Notifications</strong>
+                                <span class="desc">Push on every new upload</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="font-size: 18px; margin-bottom: 16px;">📝 Assignments</h3>
+                    <ul class="bullet-list">
+                        <li>
+                            <span class="check">✓</span>
+                            <div>
+                                <strong>Create & Distribute</strong>
+                                <span class="desc">Set deadlines and instructions</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <div>
+                                <strong>Collect Submissions</strong>
+                                <span class="desc">File uploads and text answers</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <div>
+                                <strong>Grade & Feedback</strong>
+                                <span class="desc">Scores and personalized comments</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <div>
+                                <strong>Track Progress</strong>
+                                <span class="desc">Submission rates and late count</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 6: Contact -->
+    <div class="page">
+        <div class="content">
+            <div class="page-header">
+                <div class="page-logo"><span>📚</span> Wisdom Classes</div>
+                <div class="page-number">Page 6</div>
+            </div>
+
+            <div class="section-title">
+                <span class="section-icon">📊</span>
+                <h2>Analytics & <span>Insights</span></h2>
+            </div>
+
+            <p class="section-desc">
+                Real-time dashboards give you complete visibility into your institute's performance.
+            </p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>📈 Attendance Trends</h3>
+                    <p>View daily, weekly, and monthly attendance patterns across classes.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⚠️ At-Risk Students</h3>
+                    <p>Identify students with low attendance who need intervention.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📊 Class Comparison</h3>
+                    <p>Compare attendance and submission rates across different classes.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📱 Mobile Reports</h3>
+                    <p>Access all analytics on-the-go from mobile devices.</p>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <h3>Ready to Get Started?</h3>
+                <p style="color: rgba(255,255,255,0.7);">Contact us for a free demo and consultation</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <span>📞</span>
+                        +91-98765-43210
+                    </div>
+                    <div class="contact-item">
+                        <span>📧</span>
+                        sales@wisdomclasses.in
+                    </div>
+                    <div class="contact-item">
+                        <span>🌐</span>
+                        www.wisdomclasses.in
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
